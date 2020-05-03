@@ -1,11 +1,19 @@
 import React from 'react';
 import './App.css';
+import NoteList from './components/NoteList';
+import AddNote from './components/AddNote';
+import { NoteProvider } from './components/NoteContext';
+import Nav from './components/Nav';
 
 function App() {
   return (
-    <div className="App">
-      <h1>My Nigga</h1>
-    </div>
+    <NoteProvider>
+      <div className="App">
+        <Nav />
+        <AddNote />
+        <NoteList />
+      </div>
+    </NoteProvider>
   );
 }
 
